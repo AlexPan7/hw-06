@@ -1,10 +1,18 @@
-import PublicLayout from './layout/PublicLayout';
+import {RouterProvider} from 'react-router-dom';
+import { ConfigProvider } from 'antd';
+import { routes } from "./routes/Routes"
 
 function App() {
   return (
-    <>
-      <PublicLayout />
-    </>
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: '#cc0000',
+        },
+      }}
+    >
+      <RouterProvider router={routes} />
+    </ConfigProvider>
   )
 }
 

@@ -1,46 +1,20 @@
-import { Layout, theme, Space } from 'antd';
-
-const { Header, Footer, Sider, Content } = Layout;
-
-const headerStyle: React.CSSProperties = {
-  textAlign: 'center',
-  color: '#fff',
-  height: 64,
-  paddingInline: 50,
-  lineHeight: '64px',
-  backgroundColor: '#7dbcea',
-};
-
-const contentStyle: React.CSSProperties = {
-  textAlign: 'center',
-  minHeight: 120,
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#108ee9',
-};
-
-const siderStyle: React.CSSProperties = {
-  textAlign: 'center',
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#3ba0e9',
-};
-
-const footerStyle: React.CSSProperties = {
-  textAlign: 'center',
-  color: '#fff',
-  backgroundColor: '#7dbcea',
-};
+import { Layout, Space } from 'antd';
+import PageHeader from '../components/Header/Header';
+import PageFooter from '../components/Footer/Footer';
+import Breadcrumbs from '../components/Breadcrumbs/Breadcrumbs';
+import {Outlet} from 'react-router-dom';
 
 const PublicLayout: React.FC = () => (
-  <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
+  <Space direction="vertical" style={{ width: '100%' }} size={[0, 0]}>
     <Layout>
-      <Sider style={siderStyle}>Sider</Sider>
-      <Layout>
-        <Header style={headerStyle}>Header</Header>
-        <Content style={contentStyle}>Content</Content>
-        <Footer style={footerStyle}>Footer</Footer>
-      </Layout>
+        <PageHeader />
+    </Layout>
+    <Layout  style={{ padding: '20px' }}>
+      <Breadcrumbs />
+      <Outlet />
+    </Layout>
+    <Layout>
+      <PageFooter />
     </Layout>
   </Space>
 );
