@@ -31,6 +31,7 @@ function App() {
 			id: uuidv4(),
 			name,
 		};
+		
 		dispatch(addCustomerAction(customer));
 	};
 	

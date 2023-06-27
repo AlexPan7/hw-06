@@ -1,8 +1,9 @@
 interface State {
   cash: number;
 }
+const ADD_CASH: string = "ADD_CASH";
+const GET_CASH: string = "GET_CASH";
 
-type ActionTypes = typeof ADD_CASH | typeof GET_CASH;
 
 interface Action {
   type: ActionTypes;
@@ -13,10 +14,12 @@ export const defaultStore: State = {
   cash: 0,
 }
 
-const ADD_CASH: string = "ADD_CASH";
-const GET_CASH: string = "GET_CASH";
+type ActionTypes = typeof ADD_CASH | typeof GET_CASH;
 
-export const cashReducer = (state: State = defaultStore, action: Action): State => {
+export const cashReducer = (
+  state: State = defaultStore,
+  action: Action
+): State => {
   switch(action.type) {
     case ADD_CASH:
       return {...state, cash: state.cash + action.payload}

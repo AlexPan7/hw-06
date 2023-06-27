@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Home, Products, NotFound } from '../pages'
+import { Home, Products, Cart, NotFound } from '../pages'
 import PublicLayout from '../layout/PublicLayout';
 
 export const routes = createBrowserRouter ([
@@ -18,6 +18,10 @@ export const routes = createBrowserRouter ([
     {
       path: '/products',
       element: <Products />
+    },
+    {
+      path: '/cart',
+      element: <Cart />
     },
   ]
  }

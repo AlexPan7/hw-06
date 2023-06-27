@@ -1,8 +1,8 @@
 import { Col, Row, Statistic } from 'antd';
-import React from 'react';
+import { Formatter, valueType } from 'antd/es/statistic/utils';
 import CountUp from 'react-countup';
 
-const formatter = (value: number) => <CountUp end={value} separator="," />;
+const formatter: Formatter = (value: valueType) => <CountUp end={Number(value)} separator="," />;
 
 export const Home = () => {
   return (

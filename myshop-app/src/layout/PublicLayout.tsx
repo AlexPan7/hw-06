@@ -4,7 +4,7 @@ import PageFooter from '../components/Footer/Footer';
 import Breadcrumbs from '../components/Breadcrumbs/Breadcrumbs';
 import {Outlet} from 'react-router-dom';
 
-const PublicLayout: React.FC = () => (
+const PublicLayout = () => (
   <Space direction="vertical" style={{ width: '100%' }} size={[0, 0]}>
     <Layout>
         <PageHeader />

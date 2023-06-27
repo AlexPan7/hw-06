@@ -15,6 +15,9 @@ function PageHeader() {
           <Menu.Item key="/products">
             <Link to="/products">Products</Link>
           </Menu.Item>
+          <Menu.Item key="/cart">
+            <Link to="/cart">Cart</Link>
+          </Menu.Item>
         </Menu>
       </Header>
     </Layout>

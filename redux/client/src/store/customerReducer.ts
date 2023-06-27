@@ -20,7 +20,10 @@ export const defaultStore = {
 const ADD_CUSTOMER: string = "ADD_CUSTOMER";
 const REMOVE_CUSTOMER: string = "REMOVE_CUSTOMER";
 
-export const customerReducer = (state: State = defaultStore, action: Action): State => {
+export const customerReducer = (
+  state: State = defaultStore,
+  action: Action
+): State => {
   switch (action.type) {
     case ADD_CUSTOMER:
       return { ...state, customers: [...state.customers, action.payload as Customer] };

@@ -8,6 +8,6 @@ export interface RootState {
 }
 
 export interface Customer {
-	id: number;
+	id: string;
 	name: string;
 }
